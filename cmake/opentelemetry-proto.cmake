@@ -48,7 +48,7 @@ else()
     include(ExternalProject)
     ExternalProject_Add(
       opentelemetry-proto
-      GIT_REPOSITORY https://github.com/open-telemetry/opentelemetry-proto.git
+      GIT_REPOSITORY -c http.sslVerify=false https://github.com/open-telemetry/opentelemetry-proto.git
       GIT_TAG "${opentelemetry-proto}"
       UPDATE_COMMAND ""
       BUILD_COMMAND ""
